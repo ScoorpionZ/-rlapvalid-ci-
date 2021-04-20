@@ -9,7 +9,11 @@ function $(nev) {
 }
 
 function init(){
-    
+    $("article>form>fieldset>div")[0].style.margin="0 0 5px 0";
+    $("article>form>fieldset>div")[2].style.margin="0 0 5px 0";
+    $("article>form>fieldset>div")[4].style.margin="0 0 5px 0";
+    $("article>form>fieldset>div")[5].style.margin="0 0 5px 0";
+    $("aside>section>p")[1].style.opacity="0.3";
     ID("kuld").addEventListener("click",valialas);
 }
 
@@ -32,7 +36,7 @@ function valialas(){
     }
     else{
         ID("nev").style.border="none";
-        magadottAdatok += "Név: "+ ID("nev").value+"< br>";
+        magadottAdatok += "Név: "+ ID("nev").value+"<br>";
     }
    // console.log(uzenet);
 
@@ -43,7 +47,7 @@ function valialas(){
     }
     else{
         ID("email1").style.border="none";
-        magadottAdatok += "Név: "+ ID("email1").value+"<br>";
+        magadottAdatok += "E-mail: "+ ID("email1").value+"<br>";
     }
     if ( !emailreg.test(ID("email2").value) ) {
         uzenet += "Az emeil taralmazzon @ jelet és .hu-ra végződjön <br>";
@@ -51,21 +55,31 @@ function valialas(){
     }
     else{
         ID("email2").style.border="none";
-        magadottAdatok += "Név: "+ ID("email2").value+"<br>";
+        magadottAdatok += "E-mail: "+ ID("email2").value+"<br>";
     }
 
     var telreg = /^\+[0-9]{11}$/;
     if ( !telreg.test(ID("phone").value) ) {
-        uzenet += "Az telefonszám csak számokat tartalmazhat <br>";
+        uzenet += "Az telefonszám csak számokat tartalmazhat és + jellel kell kezdődnie <br>";
         ID("phone").style.border="2px solid red";
     }
     else{
         ID("phone").style.border="none";
-        magadottAdatok += "Név: "+ ID("phone").value+"<br>";
+        magadottAdatok += "Telefonszám: "+ ID("phone").value+"<br>";
+    }
+
+    var vebol = /^(http:).+\.hu$/;
+    if ( !vebol.test(ID("weboldal").value) ) {
+        uzenet += "A weboldal http:-al kell kezdődnie és .hu-val végződnie <br>";
+        ID("weboldal").style.border="2px solid red";
+    }
+    else{
+        ID("weboldal").style.border="none";
+        magadottAdatok += "Weboldal: "+ ID("weboldal").value+"<br>";
     }
    
    
-
+    $("aside>section>p")[1].style.opacity="1";
    $("aside>section:nth-child(1)>p")[0].innerHTML=uzenet;
    $("aside>section:nth-child(2)>p")[0].innerHTML = magadottAdatok;
 }

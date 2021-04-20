@@ -20,8 +20,8 @@ and open the template in the editor.
             </header>
             <nav>
                 <a href="index.html">Űrlap</a>
-                <a href="#">Menü 1</a> 
-                <a href="#">Menü 2</a>
+                <a href="index.html">Menü 1</a> 
+                <a href="index.html">Menü 2</a>
 
             </nav>
             <article>
@@ -31,15 +31,51 @@ and open the template in the editor.
                         <div class="urlapelem"   >
                             <label for="nev">Név</label>
                             <input type="text" name="nev" id="nev" placeholder="Adja meg a nevét!" title="A név nagybetűvel kezdődik és legalább 3 karakter!" >
-                            <label for="email1">E-mail</label><br>
+                        </div>
+                        <div>
+                            <label for="email1">E-mail</label>
                             <input type="email" id="email1" name="email1" placeholder="valaki@vmi.hu">
-                            <label for="email2">E-mail újra</label><br>
+                        </div>
+                        <div>
+                            <label for="email2">E-mail újra</label>
                             <input type="email" id="email2" name="email2" placeholder="valaki@vmi.hu">
-                            <label for="phone">Telefonszám:</label><br>
+                        </div>
+                        <div>
+                            <label for="phone">Telefonszám</label>
                             <input type="tel" id="phone" name="phone" placeholder="+36-30-000-0000">
                         </div> 
                     </fieldset>  
-                    <input type="button" id="kuld" value="Küld">
+                    <fieldset >
+                        <div>
+                            <label for="weboldal">Weboldal</label>
+                            <input type="text" name="weboldal" id="weboldal" placeholder="http://valami.hu" title="A név nagybetűvel kezdődik és legalább 3 karakter!" >
+                        </div>
+                        <div id="prioritasok">
+                            <label for="prioritas">Prioritás</label>
+                            <select name="prioritas" id="prioritas">
+                                <option value="alacsony">alacsony</option>
+                                <option value="kozepes">közepes</option>
+                                <option value="magas">magas</option>
+                            </select>
+                        </div>
+                        <div>
+                            <div id="al">
+                                <label for="uzenet">Üzenet</label>
+                            </div>
+                            <div>
+                                <textarea id="uzenet" name="uzenet"></textarea>
+                            </div>
+                              
+                        </div>
+                    </fieldset> 
+                </form>
+                    <div>
+                        <input type="button" id="kuld" value="Küld">
+                    </div>
+                    <div id="torles">
+                        <input type="button" id="torol" value="Törlöl">
+                    </div>
+                    
             </article>
             <aside>
                 <section>

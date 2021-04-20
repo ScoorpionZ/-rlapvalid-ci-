@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+main{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header{
+    flex: 100%;
+}
+
+nav{
+    flex: calc(15.3333% - 20px);
+    display: flex;
+    flex-direction:column;
+}
+
+article{
+    flex: calc(48.3333% - 20px);
+}
+
+aside{
+    flex: calc(33.3333% - 20px);
+}
+
+footer{
+    flex: 100%;
+}
