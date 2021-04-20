@@ -29,3 +29,98 @@ aside{
 footer{
     flex: 100%;
 }
+
+
+@media screen and (max-width: 1262px) {
+    fieldset>div>input{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1169px) {
+    fieldset>div>input{
+        width: 50%;
+    }
+    #al{
+        float: left;
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 1087px) {
+    main{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 931px) {
+    main{
+        width: 85%;
+    }
+    article{
+        flex: calc(51.3333% - 20px);
+    }
+    
+    aside{
+        flex: calc(30.3333% - 20px);
+    }
+}
+
+@media screen and (max-width: 723px) {
+    main{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    nav{
+        flex: 100%;
+    }
+    
+    article{
+        flex: 100%;
+    }
+    
+    aside{
+        flex: 100%;
+    }
+    #al{
+        margin-left: 18%;
+    }
+}
+
+@media screen and (max-width: 523px) {
+    #al{
+        margin-left: 15%;
+    }
+    header>h1{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    #al{
+        margin-left: 12%;
+    }
+    #kuld{
+        width: 100%;
+        float: none;
+        margin-right: 0px;
+        margin-bottom: 5px;
+    }
+    #torles>#torol{
+        width: 100%;
+    }
+    header>h1{
+        font-size: 27px;
+    }
+}
+
+@media screen and (max-width: 369px) {
+    #al{
+        margin-left: 10%;
+    }
+    header>h1{
+        font-size: 24px;
+    }
+}
