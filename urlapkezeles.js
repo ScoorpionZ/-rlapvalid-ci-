@@ -49,14 +49,23 @@ function valialas(){
         ID("email1").style.border="none";
         magadottAdatok += "E-mail: "+ ID("email1").value+"<br>";
     }
+    
     if ( !emailreg.test(ID("email2").value) ) {
         uzenet += "Az emeil taralmazzon @ jelet és .hu-ra végződjön <br>";
         ID("email2").style.border="2px solid red";
     }
     else{
-        ID("email2").style.border="none";
-        magadottAdatok += "E-mail: "+ ID("email2").value+"<br>";
+        if(ID("email1").value!==ID("email2").value){
+            uzenet +="Nem egyezik meg a két email cím<br>";
+            ID("email2").style.border="2px solid red";
+        }
+        else{
+            ID("email2").style.border="none";
+            magadottAdatok += "E-mail: "+ ID("email2").value+"<br>";
+        }
     }
+
+    
 
     var telreg = /^\+[0-9]{11}$/;
     if ( !telreg.test(ID("phone").value) ) {
